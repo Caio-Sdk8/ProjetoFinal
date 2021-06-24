@@ -1,14 +1,14 @@
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
     width: 1200px;
 }
 
-.header{
+.header {
     width: 1200px;
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@ box-sizing: border-box;
     justify-content: space-between;
 }
 
-main{
+main {
     display: flex;
     justify-content: center;
 }
@@ -28,7 +28,7 @@ header {
     height: 53px;
 }
 
-.icones{
+.icones {
     width: 233px;
     display: flex;
     justify-content: space-between;
@@ -39,7 +39,7 @@ header {
     border-radius: 50px;
 }
 
-.informações{
+.informações {
     width: 646px;
     height: 154px;
     display: flex;
@@ -48,14 +48,13 @@ header {
     margin-left: 205px;
 }
 
-.icon_grande{
+.icon_grande {
     width: 152px;
     height: 154px;
     border-radius: 115px;
-
 }
 
-.todasasdivs{
+.todasasdivs {
     width: 391px;
     display: flex;
     flex-direction: column;
@@ -67,25 +66,24 @@ header {
     justify-content: space-between;
 }
 
-.nomereal{
+.nomereal {
     display: flex;
     justify-content: space-between;
 }
 
-.nome{
+.nome {
     font-weight: bold;
 }
 
-.sair{
+.sair {
     color: #2686CC;
 }
 
-.nomegrande{
+.nomegrande {
     font-weight: bold;
-
 }
 
-hr{
+hr {
     width: 926px;
     margin-top: 34px;
     margin-bottom: 21px;
@@ -94,24 +92,24 @@ hr{
     border: 1px solid #DCDCDC;
 }
 
-.hr_alinhar{
+.hr_alinhar {
     display: flex;
     justify-content: center;
 }
 
-.publicações_span{
+.publicações_span {
     text-transform: uppercase;
     margin-left: 8px;
 }
 
-.publicações{
+.publicações {
     margin-left: 355px;
     margin-bottom: 51px;
     display: flex;
     align-items: center;
 }
 
-.feed{
+.feed {
     width: 934px;
     height: 404px;
     display: flex;
@@ -123,24 +121,29 @@ hr{
     height: 404px;
 }
 
-.div_main{
+.div_main {
     width: 224px;
     height: 65px;
     display: flex;
     justify-content: space-between;
 }
 
-.foto_feed{
+.foto_feed {
     width: 65px;
     border-radius: 115px;
 }
 
-.nomenofeed{
+.nomenofeed {
     /* font-size: 14px; */
 }
 
-.textinhos{
+.textinhos {
     width: 138px;
+    display: flex;
+    flex-direction: column;
+}
+
+.divreacoes {
     display: flex;
     flex-direction: column;
 }
