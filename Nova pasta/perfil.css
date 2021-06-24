@@ -1,0 +1,146 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.container {
+    width: 1200px;
+}
+
+.header{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 53px;
+}
+
+.icones{
+    width: 233px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icone {
+    width: 32px;
+    border-radius: 50px;
+}
+
+.informações{
+    width: 646px;
+    height: 154px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+    margin-left: 205px;
+}
+
+.icon_grande{
+    width: 152px;
+    height: 154px;
+    border-radius: 115px;
+
+}
+
+.todasasdivs{
+    width: 391px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.follows {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nomereal{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nome{
+    font-weight: bold;
+}
+
+.sair{
+    color: #2686CC;
+}
+
+.nomegrande{
+    font-weight: bold;
+
+}
+
+hr{
+    width: 926px;
+    margin-top: 34px;
+    margin-bottom: 21px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #DCDCDC;
+}
+
+.hr_alinhar{
+    display: flex;
+    justify-content: center;
+}
+
+.publicações_span{
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+.publicações{
+    margin-left: 355px;
+    margin-bottom: 51px;
+    display: flex;
+    align-items: center;
+}
+
+.feed{
+    width: 934px;
+    height: 404px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foto1 {
+    width: 430px;
+    height: 404px;
+}
+
+.div_main{
+    width: 224px;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foto_feed{
+    width: 65px;
+    border-radius: 115px;
+}
+
+.nomenofeed{
+    /* font-size: 14px; */
+}
+
+.textinhos{
+    width: 138px;
+    display: flex;
+    flex-direction: column;
+}
