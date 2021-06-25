@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\caio0\\OneDrive\\Documentos\\ProjetoFinal\\InstaDev\\InstaDev.csproj": {}
+    "C:\\Users\\caio0\\OneDrive\\Área de Trabalho\\ProjetoFinal\\InstaDev\\InstaDev.csproj": {}
   },
   "projects": {
-    "C:\\Users\\caio0\\OneDrive\\Documentos\\ProjetoFinal\\InstaDev\\InstaDev.csproj": {
+    "C:\\Users\\caio0\\OneDrive\\Área de Trabalho\\ProjetoFinal\\InstaDev\\InstaDev.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\caio0\\OneDrive\\Documentos\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
+        "projectUniqueName": "C:\\Users\\caio0\\OneDrive\\Área de Trabalho\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
         "projectName": "InstaDev",
-        "projectPath": "C:\\Users\\caio0\\OneDrive\\Documentos\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
+        "projectPath": "C:\\Users\\caio0\\OneDrive\\Área de Trabalho\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
         "packagesPath": "C:\\Users\\caio0\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\caio0\\OneDrive\\Documentos\\ProjetoFinal\\InstaDev\\obj\\",
+        "outputPath": "C:\\Users\\caio0\\OneDrive\\Área de Trabalho\\ProjetoFinal\\InstaDev\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\caio0\\AppData\\Roaming\\NuGet\\NuGet.Config"
