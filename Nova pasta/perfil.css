@@ -32,6 +32,7 @@ header {
     width: 233px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .icone {
@@ -185,4 +186,24 @@ span{
 
 .rio{
     font-size: 14px;
+}
+
+.casinha{
+    width: 19.5px;
+    height: 21.13px;
+}
+
+.aviaozinho{
+    width: 25px;
+    height: 25px;
+}
+
+.bússola{
+    width: 24px;
+    height: 24px;
+}
+
+.like{
+    width: 23.33px;
+    height: 20.42px;
 }
