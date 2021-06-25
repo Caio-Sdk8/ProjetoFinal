@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.principal {
+    width: 100%;
+    height: 976px;
+    padding-top: 38.4px;
+}
+
+.edicao {
+    width: 1496px;
+    height: 976px;
+    margin: auto;
+    display: flex;
+    border: solid 0.1rem #F1F1F1;
+    background-color: white;
+}
+
+.titulo {
+    width: 372.8px;
+    height: 976px;
+    border-right: solid 0.1rem #F1F1F1;
+}
+
+.titulo h1 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.editar {
+    width: 372.8px;
+    height: 87px;
+    padding-left: 46.4px;
+    padding-top: 30.4px;
+    font-size: 24px;
+    border-left: solid 5px;
+}
+
+.img {
+    display: flex;
+    width: 320px;
+    height: 976px;
+    padding-left: 206px;
+    list-style-type: none;
+    justify-content: right;
+}
+
+.texto-editar-perfil {
+    width: 320px;
+    height: 583px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.texto h2 {
+    font-size: 24.2px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.informacao {
+    width: 928px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    list-style-type: none;
+    font-size: 24.2px;
+    font-weight: 600;
+}
+
+.informacao input {
+    border: 1,6px solid #ccc;
+    padding-left: 16px;
+    color: black;
+}
+
+.informacao input:focus {
+    outline-color: rgb(134, 134, 134);
+}
+
+.info-usuario {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    margin-left: 245px;
+}
+
+.info-usuario img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 32px;
+}
+
+.info {
+    width: 837px;
+    height: 160px;
+    padding-top: 40px;
+}
+
+.info h2 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info a {
+    font-size: 22.4px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #2686CC;
+}
+
+.info a:hover {
+    text-decoration: underline;
+}
+
+.alterar-editar{
+    color: #2686CC;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.alterar-editar input{
+    display: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.alterar-editar :hover{
+    text-decoration: underline;
+    cursor: pointer;
+    
+}
+
+.nome {
+    display: flex;
+}
+
+.nome label {
+    margin-top: 8px;
+    margin-right: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nome input {
+    width: 566px;
+    height: 48px;
+    border-style: solid 1,6px;
+    border-radius: 3px;
+}
+
+.text-input {
+    width: 566px;
+    word-break: normal;
+    margin-bottom: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-input p {
+    margin: 16px 0;
+    color: #909090;
+    border-style: solid 0,16px;
+    font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.usuario {
+    display: flex;
+}
+
+.usuario label {
+    margin-top: 8px;
+    margin-right: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.usuario input {
+    width: 566px;
+    height: 48px;
+    border-style: solid 1,6px;
+    border-radius: 3px;
+}
+
+.usuario p {
+    width: 566px;
+    color: #909090;
+    border-style: solid 0.1rem;
+    font-size: 19px;
+}
+
+#txt-username {
+    margin-bottom: 2.5rem;
+}
+
+.email {
+    display: flex;
+}
+
+.email label {
+    margin-top: 0.5rem;
+    margin-right: 2.0rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.email input {
+    width: 573px;
+    height: 48px;
+    border-style: solid 0.1rem;
+    border-radius: 0.2rem;
+}
+
+.enviar {
+    width: 35.4rem;
+    height: 12.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.botao {
+    font-size: 19px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #2686CC;
+    text-decoration: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.botao:hover {
+    cursor: pointer;
+}
+
+.desativar {
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 19px;
+    color: #2686CC;
+}
+
+.desativar:hover {
+    text-decoration: underline;
+}
