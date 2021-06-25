@@ -40,6 +40,10 @@ header {
     border-radius: 50px;
 }
 
+main {
+    background-color: #E5E5E5;
+}
+
 .informações {
     width: 646px;
     height: 154px;
@@ -78,6 +82,7 @@ header {
 
 .sair {
     color: #2686CC;
+    text-decoration: none;
 }
 
 .nomegrande {
@@ -117,6 +122,8 @@ hr {
     display: flex;
     justify-content: space-between;
     margin-bottom: 53px;
+    background-color: #FFFFFF;
+    align-items: center;
 }
 
 .foto1 {
@@ -157,6 +164,7 @@ hr {
     width: 465px;
     height: 351px;
     justify-content: space-between;
+    margin-right: 10px;
 }
 
 .comentario {
@@ -172,7 +180,7 @@ hr {
 }
 
 .nomecmt {
-    margin-right: 15px;
+    margin-right: 10px;
     font-weight: bold;
 }
 
@@ -206,4 +214,17 @@ span {
 .like {
     width: 23.33px;
     height: 20.42px;
+}
+
+.corazon {
+    width: 15px;
+    height: 13.12px;
+}
+
+.spanzada {
+    display: flex;
+}
+
+.azaralhou {
+    width: 240px;
 }

@@ -54,3 +54,10 @@ header {
     width: 23.33px;
     height: 20.42px;
 }
+
+.inputpesquisa {
+    width: 215px;
+    height: 28px;
+    color: #FAFAFA;
+    border: 1px solid #DCDCDC;
+}
