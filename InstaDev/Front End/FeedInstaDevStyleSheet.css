@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap%27');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: yellowgreen;
+}
+
+.container{
+    width: 935px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+header{
+    background-color: #ffffff;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+
+.divisaoHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.inputPesquisa{
+    width: 215px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pesquisa{
+    height: 28px;
+    width: 215px;
+    left: 852px;
+    top: 12px;
+    border-radius: 2px;
+    text-align-last: center;
+}
+
+.instadevtexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Grand Hotel', cursive;
+    font-weight: 800;
+    font-size: 40px;
+    width: 200px;
+}
+
+
+.icones{
+    width: 190px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+/* Secção Storys */
+
+.containerstory {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 610px;
+    padding: 5px 10px;
+}
+
+.storys {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+}
+
+.storyuser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+/* Secção Poster */
+
+.containerpost {
+    background-color: white;
+    display: flex;
+    padding: 30px;
+    margin-top: 40px;
+    width: 610px;
+}
