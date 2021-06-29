@@ -6,23 +6,25 @@ namespace InstaDev.Models
 {
     public class Post : BaseInstadev
     {
-        public string Local{get; set;}
+        public string Local { get; set; }
 
-        public string IdPost {get; set;}
+        public string IdPost { get; set; }
 
         public Usuario UsuarioPost;
 
-        public string Descrição;
+        public string Descrição { get; set; }
 
-        public string ImagemPost;
+        public string ImagemPost { get; set; }
 
         private const string CAMINHO = "Database/postagem.csv";
 
-        public Post(){
+        public Post()
+        {
             criarpastaearquivo(CAMINHO);
         }
 
-        private string Preparar(Post p){
+        private string Preparar(Post p)
+        {
             return $"{p.IdPost};{p.Local};{p.UsuarioPost};{p.Descrição};{p.ImagemPost}";
         }
 
@@ -36,22 +38,31 @@ namespace InstaDev.Models
 
         public void Criar(Post p)
         {
-            string[] linha = {Preparar(p)};
+            string[] linha = { Preparar(p) };
             File.AppendAllLines(CAMINHO, linha);
         }
 
-        public void CriarId(Post p){
+        public void CriarId(Post p)
+        {
             Random randonzin = new Random(3000);
 
-            p.IdPost = $"#BR{randonzin.Next()}";
+            bool validando = false;
 
-            List<string> linhas = lertodaslinhasCSV(CAMINHO);
-            string validar = linhas.Find(x => x.Split(";")[0] == IdPost);
-
-            if (validar != null)
+            do
             {
                 p.IdPost = $"#BR{randonzin.Next()}";
-            }
+
+                List<string> linhas = lertodaslinhasCSV(CAMINHO);
+                string validar = linhas.Find(x => x.Split(";")[0] == IdPost);
+
+                if (validar != null)
+                {
+                    p.IdPost = $"#BR{randonzin.Next()}";
+                }else{
+                    validando = false;
+                }
+
+            } while (validando);
         }
 
         public void Deletar(string id)
@@ -67,7 +78,8 @@ namespace InstaDev.Models
 
             string[] linhas = File.ReadAllLines(CAMINHO);
 
-            foreach (var item in linhas){
+            foreach (var item in linhas)
+            {
                 string[] linha = item.Split(";");
 
                 Post post = new Post();
@@ -81,7 +93,7 @@ namespace InstaDev.Models
 
                 LerEquipes.Add(post);
             }
-           return LerEquipes;
+            return LerEquipes;
         }
 
     }

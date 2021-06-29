@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InstaDev.Controllers
 {
-    [Route("Postagem")]
+    [Route("Feed")]
     public class PostController : Controller
     {
         Post postModel = new Post();
@@ -19,17 +19,18 @@ namespace InstaDev.Controllers
         }
 
         
-        [Route("CriarPost")]
+        [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection form)
         {
             Post novaPostagem = new Post();
             novaPostagem.Descrição = form["Descrição"];
-
+            novaPostagem.ImagemPost = form["ImagemPost"];
+            novaPostagem.Local = form["Local"];
             if (form.Files.Count > 0)
             {
 
                 var file = form.Files[0];
-                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Equipes");
+                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Postagens");
 
                 if (!Directory.Exists(folder))
                 {
@@ -51,14 +52,14 @@ namespace InstaDev.Controllers
 
             ViewBag.Post = postModel.LerTodas();
 
-            return LocalRedirect("~/Equipe/Listar");
+            return LocalRedirect("~/Feed");
         }
 
         [Route("{id}")]
         public IActionResult Excluir(string id){
             postModel.Deletar(id);
             ViewBag.Post = postModel.LerTodas();
-            return LocalRedirect("~/Equipe/Listar");
+            return LocalRedirect("~/Feed");
         }
     }
 }
