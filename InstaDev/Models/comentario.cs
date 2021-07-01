@@ -12,10 +12,38 @@ namespace InstaDev.Models
 
         public int like;
 
+        public string IdPost { get; set; }
+
+
         
         public List<comentario> lista = new List<comentario>();
 
         public const string CAMINHO = "Database/comentarios.csv";
+
+
+        public void CriarId(comentario c)
+        {
+            Random randonzin = new Random(3000);
+
+            bool validando = false;
+
+            do
+            {
+                c.IdPost = $"#BR{randonzin.Next()}";
+
+                List<string> linhas = lertodaslinhasCSV(CAMINHO);
+                string validar = linhas.Find(x => x.Split(";")[0] == IdPost);
+
+                if (validar != null)
+                {
+                    c.IdPost = $"#BR{randonzin.Next()}";
+                }else{
+                    validando = false;
+                }
+
+            } while (validando);
+        }
+
 
         public comentario(){
             criarpastaearquivo(CAMINHO);

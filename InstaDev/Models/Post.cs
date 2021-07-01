@@ -41,7 +41,6 @@ namespace InstaDev.Models
             string[] linha = { Preparar(p) };
             File.AppendAllLines(CAMINHO, linha);
         }
-
         public void CriarId(Post p)
         {
             Random randonzin = new Random(3000);
