@@ -1,36 +1,46 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace InstaDev.Models
 {
-    public class comentario
+    public class comentario : BaseInstadev
     {
         public string comment;
 
         public Usuario usuario;
 
+        public int like;
+
         
         public List<comentario> lista = new List<comentario>();
 
-        public const string PATH = "Database/comentarios.csv";
-        public void cadastrar(){
-            
+        public const string CAMINHO = "Database/comentarios.csv";
+
+        public comentario(){
+            criarpastaearquivo(CAMINHO);
         }
 
-        public void excluir() {
-
+        private string Preparar(comentario c){
+            return $"{c.usuario};{c.comment}";
+        }
+        public void cadastrar(comentario c){
+            //salvar o que foi escrito
+            string[] armazenar = {Preparar(c)}; 
+            File.AppendAllLines(CAMINHO, armazenar);
         }
 
-        public void like(){
-
+        public void excluir(comentario c) {
+            //excluir o comentario
         }
 
-        public void alterar() {
-
+        public void darlike(comentario c){
+            //dar like no comentario
+            c.like = c.like + 1;
         }
 
-        private void preparar(){
-
+        public void alterar(comentario c) {
+            //editar o comentario
         }
     }
 }

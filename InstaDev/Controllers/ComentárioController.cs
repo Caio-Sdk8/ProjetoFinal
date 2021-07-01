@@ -1,11 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace InstaDev.Controllers
 {
-    public class ComentárioController
+    public class ComentárioController 
     {
-        //public IActionResult index() {
-          //  return Views();
-        //} 
+        
     }
 }
