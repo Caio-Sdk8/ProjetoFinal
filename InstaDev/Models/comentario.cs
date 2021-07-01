@@ -14,7 +14,7 @@ namespace InstaDev.Models
 
         public const string PATH = "Database/comentarios.csv";
         public void cadastrar(){
-
+            
         }
 
         public void excluir() {
@@ -22,6 +22,14 @@ namespace InstaDev.Models
         }
 
         public void like(){
+
+        }
+
+        public void alterar() {
+
+        }
+
+        private void preparar(){
 
         }
     }

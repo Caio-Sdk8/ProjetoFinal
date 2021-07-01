@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\caio0\\OneDrive\\Documentos\\ProjetoFinal\\InstaDev\\InstaDev.csproj": {}
+    "C:\\Users\\dev\\Desktop\\ProjetoFinal\\InstaDev\\InstaDev.csproj": {}
   },
   "projects": {
-    "C:\\Users\\caio0\\OneDrive\\Documentos\\ProjetoFinal\\InstaDev\\InstaDev.csproj": {
+    "C:\\Users\\dev\\Desktop\\ProjetoFinal\\InstaDev\\InstaDev.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\caio0\\OneDrive\\Documentos\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
+        "projectUniqueName": "C:\\Users\\dev\\Desktop\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
         "projectName": "InstaDev",
-        "projectPath": "C:\\Users\\caio0\\OneDrive\\Documentos\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
-        "packagesPath": "C:\\Users\\caio0\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\caio0\\OneDrive\\Documentos\\ProjetoFinal\\InstaDev\\obj\\",
+        "projectPath": "C:\\Users\\dev\\Desktop\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
+        "packagesPath": "C:\\Users\\dev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dev\\Desktop\\ProjetoFinal\\InstaDev\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\caio0\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\dev\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
