@@ -12,7 +12,7 @@ namespace InstaDev.Models
 
         public int like;
 
-        public string IdPost { get; set; }
+        public string IdComentario { get; set; }
 
 
         
@@ -29,14 +29,14 @@ namespace InstaDev.Models
 
             do
             {
-                c.IdPost = $"#BR{randonzin.Next()}";
+                c.IdComentario = $"#BR{randonzin.Next()}";
 
                 List<string> linhas = lertodaslinhasCSV(CAMINHO);
-                string validar = linhas.Find(x => x.Split(";")[0] == IdPost);
+                string validar = linhas.Find(x => x.Split(";")[0] == IdComentario);
 
                 if (validar != null)
                 {
-                    c.IdPost = $"#BR{randonzin.Next()}";
+                    c.IdComentario = $"#BR{randonzin.Next()}";
                 }else{
                     validando = false;
                 }
@@ -50,7 +50,7 @@ namespace InstaDev.Models
         }
 
         private string Preparar(comentario c){
-            return $"{c.usuario};{c.comment}";
+            return $"{c.IdComentario};{c.usuario};{c.comment}";
         }
         public void cadastrar(comentario c){
             //salvar o que foi escrito
@@ -58,8 +58,28 @@ namespace InstaDev.Models
             File.AppendAllLines(CAMINHO, armazenar);
         }
 
-        public void excluir(comentario c) {
-            //excluir o comentario
+        public void listas() {
+
+            string[] armazenamento = File.ReadAllLines(CAMINHO);
+
+            foreach (var item in armazenamento)
+            {
+                comentario b = new comentario();
+                //b = objeto para a lista
+                b.IdComentario = armazenamento[0];
+                b.usuario.nome = armazenamento[1];
+                b.comment = armazenamento[2];
+
+                lista.Add(b);
+            }
+        }
+
+        public void Deletar(string id)
+        {
+            //excluir comentario
+            List<string> linhas = lertodaslinhasCSV(CAMINHO);
+            linhas.RemoveAll(x => x.Split(";")[0] == IdComentario.ToString());
+            reescreverCSV(CAMINHO, linhas);
         }
 
         public void darlike(comentario c){

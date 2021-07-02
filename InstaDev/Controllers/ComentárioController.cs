@@ -3,7 +3,7 @@ using System;
 
 namespace InstaDev.Controllers
 {
-    public class ComentárioController 
+    public class ComentárioController : Controller
     {
         
     }
