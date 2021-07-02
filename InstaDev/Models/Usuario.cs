@@ -50,6 +50,25 @@ namespace InstaDev.Models
          public void alterar(Usuario u)
         {
             List<string> linhas = lertodaslinhasCSV(CAMINHO);
+            var teste = linhas.Find(x => x.Split(";")[0] == u.IdUsuario.ToString());
+            u.IdUsuario = teste.Split(";")[0];
+            if (u.Nome == "")
+            {
+                u.Nome = teste.Split(";")[1];
+            }
+            if (u.Username == "")
+            {
+                u.Username = teste.Split(";")[2];
+            }
+            if (u.email == "")
+            {
+                u.email = teste.Split(";")[3];
+            }
+            u.senha = teste.Split(";")[4];
+            if (u.ImagemUsuario == "" || u.ImagemUsuario == "padraoUsuario.png")
+            {
+                u.ImagemUsuario = teste.Split(";")[3];
+            }
             linhas.RemoveAll(x => x.Split(";")[0] == u.IdUsuario.ToString());
             linhas.Add(preparar(u));
             reescreverCSV(CAMINHO, linhas);

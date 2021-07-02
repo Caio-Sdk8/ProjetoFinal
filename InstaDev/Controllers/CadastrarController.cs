@@ -7,7 +7,7 @@ namespace InstaDev.Controllers
 {
     public class CadastrarController : Controller
     {
-        Usuario usuarioModel = new Usuario();
+        public Usuario usuarioModel = new Usuario();
 
         public IActionResult Index()
         {
