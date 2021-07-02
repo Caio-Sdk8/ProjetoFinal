@@ -24,7 +24,6 @@ namespace InstaDev.Controllers
         {
             Post novaPostagem = new Post();
             novaPostagem.Descrição = form["Descrição"];
-            novaPostagem.ImagemPost = form["ImagemPost"];
             novaPostagem.Local = form["Local"];
             if (form.Files.Count > 0)
             {
@@ -47,6 +46,8 @@ namespace InstaDev.Controllers
             else{
                 novaPostagem.ImagemPost = "padrao.png";
             }
+
+            novaPostagem.CriarId(novaPostagem);
 
             postModel.Criar(novaPostagem);
 
