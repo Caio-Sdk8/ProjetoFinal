@@ -20,22 +20,16 @@ namespace InstaDev.Controllers
             _logger = logger;
         }
 
-        [Route("Cadastrar")]
-        public IActionResult Cadastrar(IFormCollection form)
-        {
-            Usuario novoUsuario = new Usuario();
-            novoUsuario.email = form["email"];
-            novoUsuario.Nome = form["Nome"];
-            novoUsuario.Username = form["Username"];
-            novoUsuario.senha = form["senha"];
+        [Route("Editar")]
+        public IActionResult Editar(IFormCollection form){
+            Usuario u = new Usuario();
+            u.ImagemUsuario = form["ImagemUsuario"];
+            u.Nome = form["Nome"];
+            u.Username = form["Username"];
+            u.email = form["email"];
 
-            novoUsuario.CriarId(novoUsuario);
-
-            usuarioModel.criar(novoUsuario);
-
-            ViewBag.Post = usuarioModel.lertodos();
-
-            return LocalRedirect("~/Home");
+            usuarioModel.alterar(u);
+            return LocalRedirect("");
         }
 
         public IActionResult Index()
