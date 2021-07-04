@@ -1,13 +1,14 @@
 @{
     ViewData["Title"] = "Login";
 }
+
 <link rel="stylesheet" href="~/css/logincadastro.css">
 <div class="quadradologin">
 
     <img src="~/anexos/instadev.svg" alt="">
-    <form action="" class="login">
-        <input type="email" required placeholder="Email">
-        <input type="password" required placeholder="Senha">
+    <form action='@Url.Action("Logar")' class="login">
+        <input type="email" required placeholder="Email" name="Email">
+        <input type="password" required placeholder="Senha" name="Senha">
         <button type="submit">Entrar</button>
     </form>
 
