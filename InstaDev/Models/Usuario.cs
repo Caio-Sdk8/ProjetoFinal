@@ -4,18 +4,13 @@ using System.IO;
 
 namespace InstaDev.Models
 {
-<<<<<<< HEAD
     public class Usuario : BaseInstadev
-=======
-    public class Usuario : BaseInstaDev
->>>>>>> develop
     {
         public string IdUsuario;
         public string Nome { get; set; }
         public string Username { get; set; }
         public string email { get; set; }
         public string senha { get; set; }
-<<<<<<< HEAD
         public string ImagemUsuario { get; set; }
 
         private const string CAMINHO = "Database/jogador.csv";
@@ -23,27 +18,13 @@ namespace InstaDev.Models
         {
             return $"{u.IdUsuario};{u.Nome};{u.Username};{u.email};{u.senha};{ImagemUsuario}";
         }
-        public Usuario()
-        {
-=======
-        public string ImagemUsuario {get; set;}
-
-        private const string CAMINHO = "Database/jogador.csv";
-        private string preparar(Usuario u){
-            return $"{u.IdUsuario};{u.Nome};{u.Username};{u.email};{u.senha};{ImagemUsuario}";
-        }
         public Usuario(){
->>>>>>> develop
             criarpastaearquivo(CAMINHO);
         }
 
         public void criar(Usuario u)
         {
-<<<<<<< HEAD
-            string[] linhas = { preparar(u) };
-=======
             string[] linhas = {preparar(u)};
->>>>>>> develop
             File.AppendAllLines(CAMINHO, linhas);
         }
         public List<Usuario> lertodos()
@@ -66,12 +47,7 @@ namespace InstaDev.Models
             }
             return users;
         }
-<<<<<<< HEAD
         public void alterar(Usuario u)
-=======
-
-         public void alterar(Usuario u)
->>>>>>> develop
         {
             List<string> linhas = lertodaslinhasCSV(CAMINHO);
             var teste = linhas.Find(x => x.Split(";")[0] == u.IdUsuario.ToString());
@@ -102,12 +78,7 @@ namespace InstaDev.Models
             List<string> linhas = lertodaslinhasCSV(CAMINHO);
             linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
             reescreverCSV(CAMINHO, linhas);
-<<<<<<< HEAD
         }
-=======
-        } 
-
->>>>>>> develop
         public void CriarId(Usuario u)
         {
             Random randonzin = new Random(3000);
@@ -124,13 +95,8 @@ namespace InstaDev.Models
                 if (validar != null)
                 {
                     u.IdUsuario = $"#BR{randonzin.Next()}";
-<<<<<<< HEAD
                 }
-                else
-                {
-=======
-                }else{
->>>>>>> develop
+                else{
                     validando = false;
                 }
 

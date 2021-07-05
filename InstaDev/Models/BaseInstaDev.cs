@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,16 +6,8 @@ namespace InstaDev.Models
 {
     public class BaseInstadev
     {
-        public void criarpastaearquivo(string _caminho){
-=======
-using System.Collections.Generic;
-using System.IO;
-namespace InstaDev.Models
-{
-    public class BaseInstaDev
-    {
+
          public void criarpastaearquivo(string _caminho){
->>>>>>> develop
             string pasta = _caminho.Split("/")[0];
             string arquivo = _caminho.Split("/")[1];
 
@@ -53,9 +44,5 @@ namespace InstaDev.Models
             }
         }
     }
-<<<<<<< HEAD
 }
-    
-=======
-}
->>>>>>> develop
+

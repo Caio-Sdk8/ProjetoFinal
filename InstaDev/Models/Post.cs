@@ -4,11 +4,8 @@ using System.IO;
 
 namespace InstaDev.Models
 {
-<<<<<<< HEAD
     public class Post : BaseInstadev
-=======
-    public class Post : BaseInstaDev
->>>>>>> develop
+
     {
         public string Local { get; set; }
 
@@ -45,10 +42,7 @@ namespace InstaDev.Models
             string[] linha = { Preparar(p) };
             File.AppendAllLines(CAMINHO, linha);
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> develop
         public void CriarId(Post p)
         {
             Random randonzin = new Random(3000);
@@ -102,9 +96,5 @@ namespace InstaDev.Models
             }
             return LerEquipes;
         }
-<<<<<<< HEAD
-
-=======
->>>>>>> develop
     }
 }
