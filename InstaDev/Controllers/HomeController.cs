@@ -40,7 +40,8 @@ namespace InstaDev.Controllers
             var tentativa = form["Email"];
             if (logado != null)
             {
-                HttpContext.Session.SetString("Username", logado.Split(";")[1]);
+                HttpContext.Session.SetString("Nome", logado.Split(";")[1]);
+                HttpContext.Session.SetString("Username", logado.Split(";")[2]);
                 ViewBag.UsuarioLog = logado;
                 return Redirect("~/Feed");
             }

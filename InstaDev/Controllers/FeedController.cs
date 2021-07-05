@@ -11,6 +11,8 @@ namespace InstaDev.Controllers
         Post postModel = new Post();
         public IActionResult Index()
         {
+            ViewBag.Nome = HttpContext.Session.GetString("Nome");
+            ViewBag.Username = HttpContext.Session.GetString("Username");
             ViewBag.Post = postModel.LerTodas();
             return View();
         }
