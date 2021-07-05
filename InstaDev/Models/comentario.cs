@@ -67,7 +67,7 @@ namespace InstaDev.Models
                 comentario b = new comentario();
                 //b = objeto para a lista
                 b.IdComentario = armazenamento[0];
-                b.usuario.nome = armazenamento[1];
+                b.usuario.Nome = armazenamento[1];
                 b.comment = armazenamento[2];
 
                 lista.Add(b);
