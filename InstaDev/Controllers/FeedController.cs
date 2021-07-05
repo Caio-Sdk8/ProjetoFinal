@@ -8,12 +8,13 @@ namespace InstaDev.Controllers
     [Route("Feed")]
     public class FeedController : Controller
     {
+        Post postModel = new Post();
         public IActionResult Index()
         {
+            ViewBag.Post = postModel.LerTodas();
             return View();
         }
-        
-        Post postModel = new Post();
+
 
         [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection form)
@@ -38,6 +39,7 @@ namespace InstaDev.Controllers
                 {
                     file.CopyTo(stream);
                 }
+                novaPostagem.ImagemPost = file.FileName;
             }
             else
             {

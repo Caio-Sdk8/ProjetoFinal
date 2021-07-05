@@ -74,7 +74,7 @@ namespace InstaDev.Models
 
         public List<Post> LerTodas()
         {
-            List<Post> LerEquipes = new List<Post>();
+            List<Post> LerPost = new List<Post>();
 
             string[] linhas = File.ReadAllLines(CAMINHO);
 
@@ -91,9 +91,9 @@ namespace InstaDev.Models
                 post.ImagemPost = linha[4];
 
 
-                LerEquipes.Add(post);
+                LerPost.Add(post);
             }
-            return LerEquipes;
+            return LerPost;
         }
     }
 }

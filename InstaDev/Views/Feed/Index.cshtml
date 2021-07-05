@@ -53,12 +53,12 @@
                         <h2>Postar</h2>
                     </article>
 
-                    <article class="formpostar">
-                        <input class="descricaopostar" type="text" placeholder="Digite a descrição da imagem...">
+                    <form method="POST" enctype="multipart/form-data" action='@Url.Action("Cadastrar")' class="formpostar">
+                        <input name="Descrição" class="descricaopostar" type="text" placeholder="Digite a descrição da imagem...">
                         <input type="file" name="uploadfile" id="img" style="display: none;" alt="Escolha a imagem">
                         <label class="img" for="img">Escolha a Imagem</label>
-                        <button class="butpostar">Postar</button>
-                    </article>
+                        <button type="submit" class="butpostar">Postar</button>
+                    </form>
                 </div>
             </div>
         </section>

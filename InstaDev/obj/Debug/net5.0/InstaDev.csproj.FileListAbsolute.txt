@@ -1,3 +1,6 @@
+C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\bin\Debug\net5.0\appsettings.json
+C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\bin\Debug\net5.0\InstaDev.exe
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.csprojAssemblyReference.cache
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.AssemblyInfoInputs.cache
@@ -12,11 +15,10 @@ C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.TagHelpers.input.cache
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.TagHelpers.output.cache
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.RazorCoreGenerate.cache
-C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\Razor\Views\Cadastro\Index.cshtml.g.cs
-C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\Razor\Views\EditarUsuario\Index.cshtml.g.cs
+C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\Razor\Views\Editar\Index.cshtml.g.cs
+C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\Razor\Views\Feed\Index.cshtml.g.cs
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\Razor\Views\Perfil\index.cshtml.g.cs
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -24,12 +26,10 @@ C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.RazorTargetAssemblyInfo.cache
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.RazorTargetAssemblyInfo.cs
+C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.Views.pdb
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.dll
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\ref\InstaDev.dll
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.pdb
-C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\bin\Debug\net5.0\appsettings.Development.json
-C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\bin\Debug\net5.0\appsettings.json
-C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\bin\Debug\net5.0\InstaDev.exe
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\bin\Debug\net5.0\InstaDev.deps.json
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\bin\Debug\net5.0\InstaDev.runtimeconfig.json
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\bin\Debug\net5.0\InstaDev.runtimeconfig.dev.json
@@ -38,6 +38,6 @@ C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\bin\Debug\net5.0
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\bin\Debug\net5.0\InstaDev.pdb
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\bin\Debug\net5.0\InstaDev.Views.dll
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\bin\Debug\net5.0\InstaDev.Views.pdb
-C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.Views.pdb
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.genruntimeconfig.cache
 C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.csproj.CopyComplete
+C:\Users\caio0\OneDrive\Área de Trabalho\ProjetoFinal\InstaDev\obj\Debug\net5.0\Razor\Views\Cadastrar\Index.cshtml.g.cs

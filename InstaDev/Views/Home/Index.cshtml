@@ -1,14 +1,14 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home page";
 }
 
 <link rel="stylesheet" href="~/css/logincadastro.css">
 <div class="quadradologin">
 
     <img src="~/anexos/instadev.svg" alt="">
-    <form action="" class="login">
-        <input type="email" required placeholder="Email">
-        <input type="password" required placeholder="Senha">
+    <form method="POST" action='@Url.Action("Logar")' class="login">
+        <input type="email" required placeholder="Email" name="Email">
+        <input type="password" required placeholder="Senha" name="Senha">
         <button type="submit">Entrar</button>
     </form>
 
@@ -22,7 +22,7 @@
 
 <div id="signup">
     <span>Não tem uma conta?</span>
-    <a href="#">Cadastre-se</a>
+    <a asp-controller="Cadastrar" asp-action="Index">Cadastre-se</a>
 </div>
 <span id="Obtenha">Obtenha o aplicativo.</span>
 
