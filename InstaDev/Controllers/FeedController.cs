@@ -10,10 +10,13 @@ namespace InstaDev.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.comentario = comentarioModel.listas();
             return View();
         }
 
+
         Post postModel = new Post();
+        comentario comentarioModel = new comentario();
 
         [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection form)
@@ -58,6 +61,18 @@ namespace InstaDev.Controllers
         {
             postModel.Deletar(id);
             ViewBag.Post = postModel.LerTodas();
+            return LocalRedirect("~/Feed");
+        }
+
+
+        [Route("criar comentario")]
+        public IActionResult cadastrar(IFormCollection form)
+        {
+            comentario c = new comentario();
+            c.comment = form["comentário da pessoa"];
+            c.CriarId(c);
+            //salvar o que foi escrito
+            comentarioModel.cadastrar(c);
             return LocalRedirect("~/Feed");
         }
     }

@@ -49,7 +49,7 @@ namespace InstaDev.Models
             criarpastaearquivo(CAMINHO);
         }
 
-        private string Preparar(comentario c){
+        public string Preparar(comentario c){
             return $"{c.IdComentario};{c.usuario};{c.comment}";
         }
         public void cadastrar(comentario c){
@@ -58,7 +58,7 @@ namespace InstaDev.Models
             File.AppendAllLines(CAMINHO, armazenar);
         }
 
-        public void listas() {
+        public List<comentario> listas() {
 
             string[] armazenamento = File.ReadAllLines(CAMINHO);
 
@@ -72,6 +72,7 @@ namespace InstaDev.Models
 
                 lista.Add(b);
             }
+            return lista;
         }
 
         public void Deletar(string id)
