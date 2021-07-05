@@ -18,6 +18,7 @@ namespace InstaDev.Controllers
         Post postModel = new Post();
         comentario comentarioModel = new comentario();
 
+
         [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection form)
         {
@@ -63,7 +64,6 @@ namespace InstaDev.Controllers
             ViewBag.Post = postModel.LerTodas();
             return LocalRedirect("~/Feed");
         }
-
 
         [Route("criar comentario")]
         public IActionResult cadastrar(IFormCollection form)

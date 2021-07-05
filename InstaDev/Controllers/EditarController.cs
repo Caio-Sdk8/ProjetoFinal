@@ -11,7 +11,6 @@ namespace InstaDev.Controllers
         {
             return View();
         }
-
         Usuario usuarioModel = new Usuario();
 
         [Route("{id}")]
