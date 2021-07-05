@@ -8,16 +8,11 @@
     "net5.0": []
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\User\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\atendimento\\.nuget\\packages\\": {}
->>>>>>> origin/develop
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\User\\Desktop\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
       "projectName": "InstaDev",
       "projectPath": "C:\\Users\\User\\Desktop\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
@@ -26,16 +21,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
-      "projectUniqueName": "C:\\Users\\atendimento\\Desktop\\Senai\\Instadev\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
-      "projectName": "InstaDev",
-      "projectPath": "C:\\Users\\atendimento\\Desktop\\Senai\\Instadev\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
-      "packagesPath": "C:\\Users\\atendimento\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\atendimento\\Desktop\\Senai\\Instadev\\ProjetoFinal\\InstaDev\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\atendimento\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> origin/develop
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -76,8 +61,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\User\\Desktop\\ProjetoFinal\\InstaDev\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

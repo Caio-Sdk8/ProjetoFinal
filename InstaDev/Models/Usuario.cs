@@ -13,14 +13,9 @@ namespace InstaDev.Models
         public string senha { get; set; }
         public string ImagemUsuario { get; set; }
 
-<<<<<<< HEAD
         private const string CAMINHO = "Database/jogador.csv";
-        private string preparar(Usuario u)
-        {
-=======
-        private const string CAMINHO = "Database/Usuarios.csv";
+
         private string preparar(Usuario u){
->>>>>>> origin/develop
             return $"{u.IdUsuario};{u.Nome};{u.Username};{u.email};{u.senha};{ImagemUsuario}";
         }
         public Usuario(){

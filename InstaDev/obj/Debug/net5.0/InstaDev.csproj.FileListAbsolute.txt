@@ -84,3 +84,14 @@ C:\Users\atendimento\Desktop\Senai\Instadev\ProjetoFinal\InstaDev\obj\Debug\net5
 C:\Users\atendimento\Desktop\Senai\Instadev\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.pdb
 C:\Users\atendimento\Desktop\Senai\Instadev\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.genruntimeconfig.cache
 C:\Users\atendimento\Desktop\Senai\Instadev\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.csproj.CopyComplete
+C:\Users\User\Desktop\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.csprojAssemblyReference.cache
+C:\Users\User\Desktop\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.AssemblyInfo.cs
+C:\Users\User\Desktop\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Desktop\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.RazorAssemblyInfo.cache
+C:\Users\User\Desktop\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.RazorAssemblyInfo.cs
+C:\Users\User\Desktop\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.dll
+C:\Users\User\Desktop\ProjetoFinal\InstaDev\obj\Debug\net5.0\ref\InstaDev.dll
+C:\Users\User\Desktop\ProjetoFinal\InstaDev\obj\Debug\net5.0\InstaDev.pdb
