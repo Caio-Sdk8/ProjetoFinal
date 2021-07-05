@@ -6,11 +6,11 @@
 <div class="quadradocadastro">
     <img src="~/anexos/instadev.svg" alt="">
     <span>Cadastre-se para ver fotos e vídeos dos seus amigos.</span>
-    <form action="">
-        <input type="email" required placeholder="Email">
-        <input type="text" required placeholder="Nome completo">
-        <input type="text" required placeholder="Nome de usuário">
-        <input type="password" required placeholder="Senha">
+    <form method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
+        <input name="Email" type="email" required placeholder="Email">
+        <input name="Nome" type="text" required placeholder="Nome completo">
+        <input name="Username" type="text" required placeholder="Nome de usuário">
+        <input name="senha" type="password" required placeholder="Senha">
         <button type="submit">Cadastre-se</button>
     </form>
     <span id="span2">Ao se cadastrar, você concorda com nossos Termos, Política de Dados e Política de Cookies. </span>
@@ -18,7 +18,7 @@
 
 <div id="signup">
     <span>Tem uma conta? </span>
-    <a href="#">Conecte-se</a>
+    <a asp-controller="Home" asp-action="Index">Conecte-se</a>
 </div>
 <span id="Obtenha">Obtenha o aplicativo.</span>
 <div class="baixeaqui">

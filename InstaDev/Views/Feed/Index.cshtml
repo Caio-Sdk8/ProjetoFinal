@@ -1,6 +1,8 @@
 @{
     ViewData["Title"] = "Feed";
 }
+@model Usuario
+
 <link rel="stylesheet" href="~/css/feed.css">
 <div class="container divisao">
     <div class="principal">
@@ -53,12 +55,12 @@
                         <h2>Postar</h2>
                     </article>
 
-                    <article class="formpostar">
-                        <input class="descricaopostar" type="text" placeholder="Digite a descrição da imagem...">
+                    <form method="POST" enctype="multipart/form-data" action='@Url.Action("Cadastrar")' class="formpostar">
+                        <input name="Descrição" class="descricaopostar" type="text" placeholder="Digite a descrição da imagem...">
                         <input type="file" name="uploadfile" id="img" style="display: none;" alt="Escolha a imagem">
                         <label class="img" for="img">Escolha a Imagem</label>
-                        <button class="butpostar">Postar</button>
-                    </article>
+                        <button type="submit" class="butpostar">Postar</button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -194,8 +196,8 @@
     <article class="sessao">
         <img src="~/anexos/thank-you 2.png" alt="Imagem de perfil">
         <div class="infosessao">
-            <h3>yes_baby</h3>
-            <a>Marcos Jeeves</a>
+            <h3>@ViewBag.Username</h3>
+            <a>@ViewBag.Nome</a>
         </div>
     </article>
 </div>

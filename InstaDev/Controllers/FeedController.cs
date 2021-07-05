@@ -8,8 +8,10 @@ namespace InstaDev.Controllers
     [Route("Feed")]
     public class FeedController : Controller
     {
+        Post postModel = new Post();
         public IActionResult Index()
         {
+<<<<<<< HEAD
             ViewBag.comentario = comentarioModel.listas();
             return View();
         }
@@ -18,6 +20,14 @@ namespace InstaDev.Controllers
         Post postModel = new Post();
         comentario comentarioModel = new comentario();
 
+=======
+            ViewBag.Nome = HttpContext.Session.GetString("Nome");
+            ViewBag.Username = HttpContext.Session.GetString("Username");
+            ViewBag.Post = postModel.LerTodas();
+            return View();
+        }
+
+>>>>>>> origin/develop
 
         [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection form)
@@ -42,6 +52,7 @@ namespace InstaDev.Controllers
                 {
                     file.CopyTo(stream);
                 }
+                novaPostagem.ImagemPost = file.FileName;
             }
             else
             {

@@ -7,13 +7,14 @@ namespace InstaDev.Controllers
 {
     public class EditarController : Controller
     {
+        [Route("Editar")]
         public IActionResult Index()
         {
             return View();
         }
         Usuario usuarioModel = new Usuario();
 
-        [Route("{id}")]
+        [Route("totestando")]
         public IActionResult Editar(IFormCollection form, string id){
             Usuario u = new Usuario();
             u.IdUsuario = id;
@@ -43,15 +44,15 @@ namespace InstaDev.Controllers
             u.email = form["email"];
 
             usuarioModel.alterar(u);
-            return LocalRedirect("");
+            return Redirect("~/Editar");
         }
 
-        [Route("{id}")]
+        [Route("teste")]
         public IActionResult Excluir(string id)
         {
             usuarioModel.deletar(id);
             ViewBag.Usuario = usuarioModel.lertodos();
-            return LocalRedirect("");
+            return LocalRedirect("~/Editar");
         }
     }
 }
