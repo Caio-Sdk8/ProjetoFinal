@@ -63,8 +63,8 @@ namespace InstaDev.Controllers
             return LocalRedirect("~/Feed");
         }
 
-        [Route("criar comentario")]
-        public IActionResult cadastrar(IFormCollection form)
+        [Route("comentar")]
+        public IActionResult comentar(IFormCollection form)
         {
             comentario c = new comentario();
             c.comment = form["comentário da pessoa"];
