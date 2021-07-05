@@ -38,15 +38,13 @@ namespace InstaDev.Controllers
             List<string> userCSV = usermodel.lertodaslinhasCSV("Database/Usuarios.csv");
             var logado = userCSV.Find(x => x.Split(";")[3] == form["Email"] && x.Split(";")[4] == form["Senha"]);
             var tentativa = form["Email"];
-            
             if (logado != null)
             {
                 HttpContext.Session.SetString("Username", logado.Split(";")[1]);
+                ViewBag.UsuarioLog = logado;
                 return Redirect("~/Feed");
             }
             return LocalRedirect("~/");
-            
-            
         }
 
         [Route("Logout")]
