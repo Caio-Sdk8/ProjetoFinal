@@ -8,13 +8,17 @@ namespace InstaDev.Controllers
     [Route("Feed")]
     public class FeedController : Controller
     {
+        public Usuario usuarioModel = new Usuario();
         Post postModel = new Post();
         comentario comentarioModel = new comentario();
         public IActionResult Index()
         {
-            ViewBag.Nome = HttpContext.Session.GetString("Nome");
-            ViewBag.Username = HttpContext.Session.GetString("Username");
+            ViewBag.Nomelog = HttpContext.Session.GetString("Nome");
+            ViewBag.Usernamelog = HttpContext.Session.GetString("Username");
+            ViewBag.Idlog = HttpContext.Session.GetString("Id");
+            ViewBag.ImagemUsuariolog = HttpContext.Session.GetString("ImagemUsuario");
             ViewBag.Post = postModel.LerTodas();
+            ViewBag.Usuario = usuarioModel.lertodos();
             return View();
         }
 
@@ -48,7 +52,7 @@ namespace InstaDev.Controllers
             }
             else
             {
-                novaPostagem.ImagemPost = "padrao.png";
+                novaPostagem.ImagemPost = "anexos/images.png";
             }
 
             novaPostagem.CriarId(novaPostagem);

@@ -18,6 +18,12 @@ main {
     top: 60px;
 }
 
+.usuarios {
+    width: 62px;
+    height: 62px;
+    border-radius: 500px;
+}
+
 
 /* Header */
 
@@ -112,7 +118,7 @@ header {
     margin-bottom: 25px;
 }
 
-.postar img{
+.postar img {
     width: 42px;
     height: 42px;
     border-radius: 100px;
@@ -273,7 +279,7 @@ header {
     color: #B6B6B6;
 }
 
-.imgsessão{
+.imgsessão {
     width: 62px;
     height: 62px;
     border-radius: 100px;

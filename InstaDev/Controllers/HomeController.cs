@@ -21,6 +21,10 @@ namespace InstaDev.Controllers
 
         public IActionResult Privacy()
         {
+            ViewBag.Nomelog = HttpContext.Session.GetString("Nome");
+            ViewBag.Usernamelog = HttpContext.Session.GetString("Username");
+            ViewBag.Idlog = HttpContext.Session.GetString("Id");
+            ViewBag.ImagemUsuariolog = HttpContext.Session.GetString("ImagemUsuario");
             return View();
         }
         [TempData]
@@ -40,8 +44,10 @@ namespace InstaDev.Controllers
             var tentativa = form["Email"];
             if (logado != null)
             {
+                HttpContext.Session.SetString("Id", logado.Split(";")[0]);
                 HttpContext.Session.SetString("Nome", logado.Split(";")[1]);
                 HttpContext.Session.SetString("Username", logado.Split(";")[2]);
+                HttpContext.Session.SetString("ImagemUsuario", logado.Split(";")[5]);
                 ViewBag.UsuarioLog = logado;
                 return Redirect("~/Feed");
             }

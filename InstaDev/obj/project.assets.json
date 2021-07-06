@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\caio0\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
+      "projectUniqueName": "C:\\Users\\caio0\\OneDrive\\Área de Trabalho\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
       "projectName": "InstaDev",
-      "projectPath": "C:\\Users\\User\\Desktop\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\ProjetoFinal\\InstaDev\\obj\\",
+      "projectPath": "C:\\Users\\caio0\\OneDrive\\Área de Trabalho\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
+      "packagesPath": "C:\\Users\\caio0\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\caio0\\OneDrive\\Área de Trabalho\\ProjetoFinal\\InstaDev\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\caio0\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

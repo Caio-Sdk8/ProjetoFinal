@@ -9,40 +9,13 @@
         <section class="containerstory">
 
             <div class="storys">
-                <article class="storyuser">
-                    <a href=""><img src="~/anexos/vin-diesel 1.png" alt="imagem de perfil"></a>
-                    <a>vin_diesel</a>
-                </article>
-
-                <article class="storyuser">
-                    <a href=""><img src="~/anexos/gabigordo 1.png" alt="imagem de perfil"></a>
-                    <a>gabigordo</a>
-                </article>
-
-                <article class="storyuser">
-                    <a href=""><img src="~/anexos/will-baiano 1.png" alt="imagem de perfil"></a>
-                    <a>will_baiano</a>
-                </article>
-
-                <article class="storyuser">
-                    <a href=""><img src="~/anexos/tony_stark 1.png" alt="imagem de perfil"></a>
-                    <a>adriano_stark</a>
-                </article>
-
-                <article class="storyuser">
-                    <a href=""><img src="~/anexos/pele 1.png" alt="imagem de perfil"></a>
-                    <a>king_pele</a>
-                </article>
-
-                <article class="storyuser">
-                    <a href=""><img src="~/anexos/samuel-rosa.png" alt="imagem de perfil"></a>
-                    <a>samuel_rosa</a>
-                </article>
-
-                <article class="storyuser">
-                    <a href=""><img src="~/anexos/chaves_metal 1.png" alt="imagem de perfil"></a>
-                    <a>chaves_metal</a>
-                </article>
+                @foreach (var item in ViewBag.Usuario)
+                {
+                    <article class="storyuser">
+                        <a asp-controller="Perfil" asp-action="Index"><img class="usuarios" src="~/@item.ImagemUsuario" alt="imagem de perfil"></a>
+                        <a>@item.Username</a>
+                    </article>
+                }
             </div>
 
         </section>
@@ -51,12 +24,14 @@
             <div class="containerpostagem">
                 <div>
                     <article class="postar">
-                        <a href=""><img src="~/anexos/images.png" alt="imagem de perfil"></a>
+                        <a href=""><img src="~/@ViewBag.ImagemUsuariolog" alt="imagem de perfil"></a>
                         <h2>Postar</h2>
                     </article>
 
-                    <form method="POST" enctype="multipart/form-data" action='@Url.Action("Cadastrar")' class="formpostar">
-                        <input name="Descrição" class="descricaopostar" type="text" placeholder="Digite a descrição da imagem...">
+                    <form method="POST" enctype="multipart/form-data" action='@Url.Action("Cadastrar")'
+                        class="formpostar">
+                        <input name="Descrição" class="descricaopostar" type="text"
+                            placeholder="Digite a descrição da imagem...">
                         <input type="file" name="uploadfile" id="img" style="display: none;" alt="Escolha a imagem">
                         <label class="img" for="img">Escolha a Imagem</label>
                         <button type="submit" class="butpostar">Postar</button>
@@ -68,49 +43,49 @@
         <section>
             @foreach (var item in ViewBag.Post)
             {
-                
-            <div class="containerposts">
-                <article class="perfilposts">
-                    <img src="~/anexos/gabigordo 2.png" alt="Imagem de Perfil">
-                    <div class="nicklocal">
-                        <a id="nick">@item.IdUsuario</a>
-                        <a>@item.Local</a>
-                    </div>
-                </article>
 
-                <img src= "~/img/Postagens/@item.ImagemPost" alt="Publicação">
+                <div class="containerposts">
+                    <article class="perfilposts">
+                        <img src="~/anexos/gabigordo 2.png" alt="Imagem de Perfil">
+                        <div class="nicklocal">
+                            <a id="nick">@ViewBag.Idlog</a>
+                            <a>@item.Local</a>
+                        </div>
+                    </article>
 
-                <article class="formreagir">
-                    <div>
-                        <a href="#"><img class="icons" src="~/anexos/HeartSVG.svg" alt="Like"></a>
-                        <a href="#"><img class="icons" src="~/anexos/BubbleSVG.svg" alt="Comentar"></a>
-                    </div>
-                    <form method="POST" enctype="multipart/form-data" action='@Url.Action("comentar")'>
-                    <input type="text" placeholder="Comentar..." name="comentário da pessoa">
-                    </form>
-                </article>
+                    <img src="~/img/Postagens/@item.ImagemPost" alt="Publicação">
 
-                <a id="likes">2077 curtidas</a>
+                    <article class="formreagir">
+                        <div>
+                            <a href="#"><img class="icons" src="~/anexos/HeartSVG.svg" alt="Like"></a>
+                            <a href="#"><img class="icons" src="~/anexos/BubbleSVG.svg" alt="Comentar"></a>
+                        </div>
+                        <form method="POST" enctype="multipart/form-data" action='@Url.Action("comentar")'>
+                            <input type="text" placeholder="Comentar..." name="comentário da pessoa">
+                        </form>
+                    </article>
 
-                <article class="comentarios">
+                    <a id="likes">2077 curtidas</a>
 
-                    <div class="comment">
-                        <h3 class="itenscomment">gabigordo</h3>
-                        <a href="#" class="itenscomment hashtag">#flamengo</a>
-                        <a class="itenscomment">Amo vocês mil milhões</a>
-                    </div>
+                    <article class="comentarios">
 
-                    <div class="comment">
-                        <h3 class="itenscomment">yes_baby</h3>
-                        <a class="itenscomment">thank you</a>
-                    </div>
+                        <div class="comment">
+                            <h3 class="itenscomment">gabigordo</h3>
+                            <a href="#" class="itenscomment hashtag">#flamengo</a>
+                            <a class="itenscomment">Amo vocês mil milhões</a>
+                        </div>
 
-                    <div class="comment">
-                        <h3 class="itenscomment">king_pele</h3>
-                        <a class="itenscomment">Esses são bons de bola, entende?</a>
-                    </div>
-                </article>
-            </div>
+                        <div class="comment">
+                            <h3 class="itenscomment">yes_baby</h3>
+                            <a class="itenscomment">thank you</a>
+                        </div>
+
+                        <div class="comment">
+                            <h3 class="itenscomment">king_pele</h3>
+                            <a class="itenscomment">Esses são bons de bola, entende?</a>
+                        </div>
+                    </article>
+                </div>
             }
 
             <div class="containerposts">
@@ -139,7 +114,7 @@
                     <div class="comment">
                         <h3 class="itenscomment">gabigordo</h3>
                         <a href="#" class="itenscomment hashtag">#flamengo</a>
-                        <a class="itenscomment">Amo vocês mil milhões <3  </a>
+                        <a class="itenscomment">Amo vocês mil milhões <3 </a>
                     </div>
 
                     <div class="comment">
@@ -199,10 +174,10 @@
     </div>
 
     <article class="sessao">
-        <img class="imgsessão" src="~/anexos/images.png" alt="Imagem de perfil">
+        <img class="imgsessão" src="~/@ViewBag.ImagemUsuariolog" alt="Imagem de perfil">
         <div class="infosessao">
-            <h3>@ViewBag.Username</h3>
-            <a>@ViewBag.Nome</a>
+            <h3 asp-controller="Perfil" asp-action="Index">@ViewBag.Usernamelog</h3>
+            <a>@ViewBag.Nomelog</a>
         </div>
     </article>
 </div>

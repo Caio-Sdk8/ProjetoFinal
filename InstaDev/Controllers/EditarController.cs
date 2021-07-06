@@ -10,6 +10,10 @@ namespace InstaDev.Controllers
         [Route("Editar")]
         public IActionResult Index()
         {
+            ViewBag.Nomelog = HttpContext.Session.GetString("Nome");
+            ViewBag.Usernamelog = HttpContext.Session.GetString("Username");
+            ViewBag.Idlog = HttpContext.Session.GetString("Id");
+            ViewBag.ImagemUsuariolog = HttpContext.Session.GetString("ImagemUsuario");
             return View();
         }
         
