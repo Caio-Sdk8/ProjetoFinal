@@ -9,6 +9,7 @@ namespace InstaDev.Controllers
     public class FeedController : Controller
     {
         Post postModel = new Post();
+        comentario comentarioModel = new comentario();
         public IActionResult Index()
         {
             ViewBag.Nome = HttpContext.Session.GetString("Nome");
@@ -22,6 +23,8 @@ namespace InstaDev.Controllers
         public IActionResult Cadastrar(IFormCollection form)
         {
             Post novaPostagem = new Post();
+
+            novaPostagem.IdUsuario = ViewBag.Nome;
             novaPostagem.Descrição = form["Descrição"];
             novaPostagem.Local = form["Local"];
             if (form.Files.Count > 0)
@@ -62,6 +65,17 @@ namespace InstaDev.Controllers
         {
             postModel.Deletar(id);
             ViewBag.Post = postModel.LerTodas();
+            return LocalRedirect("~/Feed");
+        }
+        
+        [Route("comentar")]
+        public IActionResult comentar(IFormCollection form)
+        {
+            comentario c = new comentario();
+            c.comment = form["comentário da pessoa"];
+            c.CriarId(c);
+            //salvar o que foi escrito
+            comentarioModel.cadastrar(c);
             return LocalRedirect("~/Feed");
         }
     }

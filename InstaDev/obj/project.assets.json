@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\atendimento\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\atendimento\\Desktop\\Senai\\Instadev\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
       "projectName": "InstaDev",
-      "projectPath": "C:\\Users\\atendimento\\Desktop\\Senai\\Instadev\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
-      "packagesPath": "C:\\Users\\atendimento\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\atendimento\\Desktop\\Senai\\Instadev\\ProjetoFinal\\InstaDev\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\ProjetoFinal\\InstaDev\\InstaDev.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\ProjetoFinal\\InstaDev\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\atendimento\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

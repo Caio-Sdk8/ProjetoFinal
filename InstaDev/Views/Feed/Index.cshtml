@@ -51,7 +51,7 @@
             <div class="containerpostagem">
                 <div>
                     <article class="postar">
-                        <a href=""><img src="~/anexos/thank-you 3.png" alt="imagem de perfil"></a>
+                        <a href=""><img src="~/anexos/images.png" alt="imagem de perfil"></a>
                         <h2>Postar</h2>
                     </article>
 
@@ -66,24 +66,28 @@
         </section>
 
         <section>
-
+            @foreach (var item in ViewBag.Post)
+            {
+                
             <div class="containerposts">
                 <article class="perfilposts">
                     <img src="~/anexos/gabigordo 2.png" alt="Imagem de Perfil">
                     <div class="nicklocal">
-                        <a id="nick">gabigordo</a>
-                        <a>Flamengo, RJ</a>
+                        <a id="nick">@item.IdUsuario</a>
+                        <a>@item.Local</a>
                     </div>
                 </article>
 
-                <img src="~/anexos/post-gabigordo 1.png" alt="Publicação">
+                <img src= "~/img/Postagens/@item.ImagemPost" alt="Publicação">
 
                 <article class="formreagir">
                     <div>
                         <a href="#"><img class="icons" src="~/anexos/HeartSVG.svg" alt="Like"></a>
                         <a href="#"><img class="icons" src="~/anexos/BubbleSVG.svg" alt="Comentar"></a>
                     </div>
-                    <input type="text" placeholder="Comentar...">
+                    <form method="POST" enctype="multipart/form-data" action='@Url.Action("comentar")'>
+                    <input type="text" placeholder="Comentar..." name="comentário da pessoa">
+                    </form>
                 </article>
 
                 <a id="likes">2077 curtidas</a>
@@ -93,7 +97,7 @@
                     <div class="comment">
                         <h3 class="itenscomment">gabigordo</h3>
                         <a href="#" class="itenscomment hashtag">#flamengo</a>
-                        <a class="itenscomment">Amo vocês mil milhões <3 </a>
+                        <a class="itenscomment">Amo vocês mil milhões</a>
                     </div>
 
                     <div class="comment">
@@ -107,6 +111,7 @@
                     </div>
                 </article>
             </div>
+            }
 
             <div class="containerposts">
                 <article class="perfilposts">
@@ -194,7 +199,7 @@
     </div>
 
     <article class="sessao">
-        <img src="~/anexos/thank-you 2.png" alt="Imagem de perfil">
+        <img class="imgsessão" src="~/anexos/images.png" alt="Imagem de perfil">
         <div class="infosessao">
             <h3>@ViewBag.Username</h3>
             <a>@ViewBag.Nome</a>

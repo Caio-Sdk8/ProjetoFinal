@@ -112,6 +112,13 @@ header {
     margin-bottom: 25px;
 }
 
+.postar img{
+    width: 42px;
+    height: 42px;
+    border-radius: 100px;
+    margin-right: 32px;
+}
+
 .postar h2 {
     margin-left: 10px;
 }
@@ -264,4 +271,10 @@ header {
 .infosessao a {
     font-size: 13px;
     color: #B6B6B6;
+}
+
+.imgsessão{
+    width: 62px;
+    height: 62px;
+    border-radius: 100px;
 }
