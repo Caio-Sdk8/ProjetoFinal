@@ -82,8 +82,7 @@ namespace InstaDev.Models
 
         public void CriarId(Usuario u)
         {
-            Random randonzin = new Random(3000);
-
+            Random randonzin = new Random();
             bool validando = false;
 
             do
