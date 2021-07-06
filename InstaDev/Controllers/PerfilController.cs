@@ -9,10 +9,10 @@ namespace InstaDev.Controllers
     {
         Usuario u = new Usuario();
 
-        [Route("{IdUsuario}")]
-        public IActionResult Index(string IdUsuario)
+        [Route("{ID}")]
+        public IActionResult Index(string ID)
         {
-            var perfil = u.lertodos().Find(x => x.IdUsuario == IdUsuario);
+            var perfil = u.lertodos().Find(x => x.IdUsuario == ID);
             ViewBag.Nometeste = perfil.Nome;
             ViewBag.Nomelog = HttpContext.Session.GetString("Nome");
             ViewBag.Usernamelog = HttpContext.Session.GetString("Username");
