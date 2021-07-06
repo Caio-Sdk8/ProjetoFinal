@@ -12,7 +12,7 @@
                 @foreach (var item in ViewBag.Usuario)
                 {
                     <article class="storyuser">
-                        <a asp-controller="Perfil" asp-action="Index"><img class="usuarios" src="~/@item.ImagemUsuario" alt="imagem de perfil"></a>
+                        <a asp-controller="Perfil" asp-action="Index" asp-route-id="@item.IdUsuario"><img class="usuarios" src="~/@item.ImagemUsuario" alt="imagem de perfil"></a>
                         <a>@item.Username</a>
                     </article>
                 }

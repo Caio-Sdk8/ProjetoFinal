@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InstaDev.Controllers
 {
+     [Route("Perfil")]
     public class PerfilController : Controller
     {
         Usuario u = new Usuario();
