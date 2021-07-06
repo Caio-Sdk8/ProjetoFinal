@@ -16,7 +16,10 @@
             <div class="nomereal">
                 <span class="nome">@ViewBag.Nometeste
                 </span>
+                @if (ViewBag.Idlog == ViewBag.idteste){
+                <a class="sair" asp-controller="Edit" asp-action="Index"> Editar perfil</a>
                 <a href="#" class="sair">sair</a>
+                }
             </div>
         </div>
     </section>

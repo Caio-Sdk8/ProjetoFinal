@@ -14,6 +14,7 @@ namespace InstaDev.Controllers
         {
             var perfil = u.lertodos().Find(x => x.IdUsuario == ID);
             ViewBag.Nometeste = perfil.Nome;
+            ViewBag.idteste = perfil.IdUsuario;
             ViewBag.Nomelog = HttpContext.Session.GetString("Nome");
             ViewBag.Usernamelog = HttpContext.Session.GetString("Username");
             ViewBag.Idlog = HttpContext.Session.GetString("Id");

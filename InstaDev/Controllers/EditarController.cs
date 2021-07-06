@@ -5,9 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InstaDev.Controllers
 {
+
+    [Route("Edit")]
     public class EditarController : Controller
     {
-        [Route("Editar")]
         public IActionResult Index()
         {
             ViewBag.Nomelog = HttpContext.Session.GetString("Nome");
@@ -19,7 +20,7 @@ namespace InstaDev.Controllers
         
         Usuario usuarioModel = new Usuario();
 
-        [Route("totestando")]
+        [Route("Editar")]
         public IActionResult Editar(IFormCollection form, string id){
             Usuario u = new Usuario();
             u.IdUsuario = id;
@@ -52,7 +53,7 @@ namespace InstaDev.Controllers
             return Redirect("~/Editar");
         }
 
-        [Route("teste")]
+        [Route("Excluir")]
         public IActionResult Excluir(string id)
         {
             usuarioModel.deletar(id);
