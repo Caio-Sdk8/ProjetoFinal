@@ -24,7 +24,7 @@ namespace InstaDev.Controllers
             ViewBag.Nomelog = HttpContext.Session.GetString("Nome");
             ViewBag.Usernamelog = HttpContext.Session.GetString("Username");
             ViewBag.Idlog = HttpContext.Session.GetString("Id");
-            ViewBag.ImagemUsuariolog = HttpContext.Session.GetString("ImagemUsuario");
+            ViewBag.ImagemUsuariolog = "anexos/instagram-logo.png";
             return View();
         }
         [TempData]

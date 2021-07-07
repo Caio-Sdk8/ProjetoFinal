@@ -18,6 +18,7 @@ namespace InstaDev.Controllers
             ViewBag.Idlog = HttpContext.Session.GetString("Id");
             ViewBag.ImagemUsuariolog = HttpContext.Session.GetString("ImagemUsuario");
             ViewBag.Post = postModel.LerTodas();
+            ViewBag.comentariospost = comentarioModel.listas();
             ViewBag.Usuario = usuarioModel.lertodos();
             return View();
         }
@@ -28,9 +29,10 @@ namespace InstaDev.Controllers
         {
             Post novaPostagem = new Post();
 
-            novaPostagem.IdUsuario = ViewBag.Id;
+            novaPostagem.IdUsuario = HttpContext.Session.GetString("Id");
             novaPostagem.Descrição = form["Descrição"];
-            novaPostagem.Local = form["Local"];
+            novaPostagem.NomeUserpost = HttpContext.Session.GetString("Username");
+            novaPostagem.ImgUserPost = HttpContext.Session.GetString("ImagemUsuario");
             if (form.Files.Count > 0)
             {
 

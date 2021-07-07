@@ -12,7 +12,8 @@
                 @foreach (var item in ViewBag.Usuario)
                 {
                     <article class="storyuser">
-                        <a asp-controller="Perfil" asp-action="Index" asp-route-id="@item.IdUsuario"><img class="usuarios" src="~/@item.ImagemUsuario" alt="imagem de perfil"></a>
+                        <a asp-controller="Perfil" asp-action="Index" asp-route-id="@item.IdUsuario"><img class="usuarios"
+                            src="~/@item.ImagemUsuario" alt="imagem de perfil"></a>
                         <a>@item.Username</a>
                     </article>
                 }
@@ -46,10 +47,10 @@
 
                 <div class="containerposts">
                     <article class="perfilposts">
-                        <img src="~/anexos/gabigordo 2.png" alt="Imagem de Perfil">
+                        <img class="imgperfpost"src="~/@item.ImgUserPost" alt="Imagem de Perfil">
                         <div class="nicklocal">
-                            <a id="nick">@ViewBag.Idlog</a>
-                            <a>@item.Local</a>
+                            <a asp-controller="Perfil" asp-action="Index" asp-route-id="@item.IdUsuario"
+                            id="nick">@item.NomeUserpost</a>
                         </div>
                     </article>
 
@@ -70,20 +71,20 @@
                     <article class="comentarios">
 
                         <div class="comment">
-                            <h3 class="itenscomment">gabigordo</h3>
-                            <a href="#" class="itenscomment hashtag">#flamengo</a>
-                            <a class="itenscomment">Amo vocês mil milhões</a>
+                            <h3 class="itenscomment">@item.NomeUserpost</h3>
+                            <a class="itenscomment">@item.Descrição</a>
                         </div>
 
-                        <div class="comment">
-                            <h3 class="itenscomment">yes_baby</h3>
-                            <a class="itenscomment">thank you</a>
-                        </div>
-
-                        <div class="comment">
-                            <h3 class="itenscomment">king_pele</h3>
-                            <a class="itenscomment">Esses são bons de bola, entende?</a>
-                        </div>
+                        @foreach (var comen in ViewBag.comentariospost)
+                        {
+                            if (comen.IdPostagem == item.IdPost)
+                            {
+                                <div class="comment">
+                                    <h3 class="itenscomment">yes_baby</h3>
+                                    <a class="itenscomment">thank you</a>
+                                </div>
+                            }
+                        }
                     </article>
                 </div>
             }

@@ -8,7 +8,7 @@ namespace InstaDev.Models
     {
         public string comment;
 
-        public Usuario usuario;
+        public string IdPostagem;
 
         public int like;
 
@@ -49,7 +49,7 @@ namespace InstaDev.Models
 
         public string Preparar(comentario c)
         {
-            return $"{c.IdComentario};{c.usuario};{c.comment}";
+            return $"{c.IdComentario};{c.IdPostagem};{c.comment}";
         }
         public void cadastrar(comentario c)
         {
@@ -68,7 +68,7 @@ namespace InstaDev.Models
                 comentario b = new comentario();
                 //b = objeto para a lista
                 b.IdComentario = armazenamento[0];
-                b.usuario.Nome = armazenamento[1];
+                b.IdPostagem = armazenamento[1];
                 b.comment = armazenamento[2];
 
                 lista.Add(b);

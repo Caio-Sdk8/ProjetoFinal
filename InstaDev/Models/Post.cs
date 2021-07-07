@@ -6,7 +6,9 @@ namespace InstaDev.Models
 {
     public class Post : BaseInstaDev
     {
-        public string Local { get; set; }
+        public string ImgUserPost { get; set; }
+
+        public string NomeUserpost;
 
         public string IdPost { get; set; }
 
@@ -25,7 +27,7 @@ namespace InstaDev.Models
 
         private string Preparar(Post p)
         {
-            return $"{p.IdPost};{p.Local};{p.IdUsuario};{p.Descrição};{p.ImagemPost}";
+            return $"{p.IdPost};{p.NomeUserpost};{p.IdUsuario};{p.Descrição};{p.ImagemPost};{p.ImgUserPost}";
         }
 
         public void Alterar(Post p)
@@ -84,10 +86,11 @@ namespace InstaDev.Models
                 Post post = new Post();
 
                 post.IdPost = linha[0];
-                post.Local = linha[1];
+                post.NomeUserpost = linha[1];
                 post.IdUsuario = linha[2];
                 post.Descrição = linha[3];
                 post.ImagemPost = linha[4];
+                post.ImgUserPost = linha[5];
 
 
                 LerPost.Add(post);

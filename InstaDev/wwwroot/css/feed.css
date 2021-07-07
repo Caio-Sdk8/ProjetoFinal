@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+.imgperfpost {
+    width: 34px;
+    height: 36px;
+    border-radius: 300px;
+}
+
 body {
     background-color: #f0f0f0;
 }
