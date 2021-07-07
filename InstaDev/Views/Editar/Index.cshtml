@@ -10,9 +10,9 @@
         </div>
         <form method="POST" action='@Url.Action("Editar")' enctype="multipart/form-data" class="informacao">
             <div class="info-usuario">
-                <img src="~/anexos/837f83bbfa8f6b38b8daa97a809d228d.jpg" alt="Foto do Perfil">
+                <img src="~/@ViewBag.ImagemUsuariolog" alt="Foto do Perfil">
                 <div class="info">
-                    <h2>Nagisa_Kun</h2>
+                    <h2>@ViewBag.Usernamelog</h2>
                         <div class="alterar-editar">
                             <label for="arquivo">Alterar foto do perfil</label>
                             <input type="file" name="arquivo" id="arquivo">

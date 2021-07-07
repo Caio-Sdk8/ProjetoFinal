@@ -47,13 +47,32 @@ namespace InstaDev.Models
             return users;
         }
 
-         public void alterar(Usuario u)
+        public void alterar(Usuario u)
         {
             List<string> linhas = lertodaslinhasCSV(CAMINHO);
-            linhas.RemoveAll(x => x.Split(";")[0] == u.IdUsuario);
+            var teste = linhas.Find(x => x.Split(";")[0] == u.IdUsuario);
+            if (u.Nome == "")
+            {
+                u.Nome = teste.Split(";")[1];
+            }
+            if (u.Username == "")
+            {
+                u.Username = teste.Split(";")[2];
+            }
+            if (u.email == "")
+            {
+                u.email = teste.Split(";")[3];
+            }
+            u.senha = teste.Split(";")[4];
+            if (u.ImagemUsuario == "")
+            {
+                u.ImagemUsuario = "padraoUsuario.png";
+            }
+            linhas.RemoveAll(x => x.Split(";")[0] == u.IdUsuario.ToString());
             linhas.Add(preparar(u));
             reescreverCSV(CAMINHO, linhas);
         }
+        
         public void deletar(string id)
         {
             List<string> linhas = lertodaslinhasCSV(CAMINHO);

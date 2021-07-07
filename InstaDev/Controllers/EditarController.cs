@@ -25,53 +25,40 @@ namespace InstaDev.Controllers
         [Route("Editar")]
         public IActionResult Editar(IFormCollection form){
             Usuario u = new Usuario();
-            u.IdUsuario = HttpContext.Session.GetString("Id");
-            u.senha = HttpContext.Session.GetString("senha");
+            u.IdUsuario = ViewBag.Idlog;
             if (form.Files.Count > 0)
             {
 
                 var file = form.Files[0];
-                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Postagens");
-
+                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/anexos");
                 if (!Directory.Exists(folder))
                 {
                     Directory.CreateDirectory(folder);
                 }
 
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", folder, file.FileName);
 
                 using (var stream = new FileStream(path, FileMode.Create))
                 {
                     file.CopyTo(stream);
                 }
+
+                u.ImagemUsuario = $"img/anexos/{file.FileName}";
+                HttpContext.Session.SetString("ImagemUsuario", u.ImagemUsuario);
             }
             else{
-                u.ImagemUsuario = "padraoUsuario.png";
+                u.ImagemUsuario = "anexos/padraoUsuario.png";
             }
+
+            u.Nome = form["Nome"];
             u.Username = form["Username"];
             u.email = form["email"];
-            u.Nome = form["Nome"];
-            if (u.Nome == "")
-            {
-                u.Nome = ViewBag.Nomelog;
-            }
-            if (u.Username == "")
-            {
-                u.Username = ViewBag.Usernamelog;
-            }
-            if (u.email == "")
-            {
-                u.email = ViewBag.Emaillog;
-            }
-            if (u.ImagemUsuario == "" || u.ImagemUsuario == "anexos/images.png")
-            {
-                u.ImagemUsuario = ViewBag.ImagemUsuariolog;
-            }
-
-            usuarioModel.alterar(u); 
-
+            u.IdUsuario = HttpContext.Session.GetString("Id");
+            usuarioModel.alterar(u);
+            ViewBag.ImagemUsuariolog = u.ImagemUsuario;
             return Redirect("~/Edit");
         }
+
 
         [Route("{id}")]
         public IActionResult Excluir(string id)
