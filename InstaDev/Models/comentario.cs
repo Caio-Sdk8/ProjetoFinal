@@ -23,23 +23,20 @@ namespace InstaDev.Models
 
         public void CriarId(comentario c)
         {
-            Random randonzin = new Random(3000);
-
+            Random randonzin = new Random();
             bool validando = false;
 
             do
             {
-                c.IdComentario = $"#BR{randonzin.Next()}";
+                c.IdComentario = $"BR{randonzin.Next()}";
 
                 List<string> linhas = lertodaslinhasCSV(CAMINHO);
-                string validar = linhas.Find(x => x.Split(";")[0] == IdComentario);
+                string validar = linhas.Find(x => x.Split(";")[0] == c.IdComentario);
 
                 if (validar != null)
                 {
                     c.IdComentario = $"#BR{randonzin.Next()}";
-                }
-                else
-                {
+                }else{
                     validando = false;
                 }
 

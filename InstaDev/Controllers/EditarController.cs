@@ -12,8 +12,10 @@ namespace InstaDev.Controllers
         public IActionResult Index()
         {
             ViewBag.Nomelog = HttpContext.Session.GetString("Nome");
+            ViewBag.Emaillog = HttpContext.Session.GetString("email");
             ViewBag.Usernamelog = HttpContext.Session.GetString("Username");
             ViewBag.Idlog = HttpContext.Session.GetString("Id");
+            ViewBag.senhalog = HttpContext.Session.GetString("senha");
             ViewBag.ImagemUsuariolog = HttpContext.Session.GetString("ImagemUsuario");
             return View();
         }
@@ -21,9 +23,10 @@ namespace InstaDev.Controllers
         Usuario usuarioModel = new Usuario();
 
         [Route("Editar")]
-        public IActionResult Editar(IFormCollection form, string id){
+        public IActionResult Editar(IFormCollection form){
             Usuario u = new Usuario();
-            u.IdUsuario = id;
+            u.IdUsuario = HttpContext.Session.GetString("Id");
+            u.senha = HttpContext.Session.GetString("senha");
             if (form.Files.Count > 0)
             {
 
@@ -45,20 +48,37 @@ namespace InstaDev.Controllers
             else{
                 u.ImagemUsuario = "padraoUsuario.png";
             }
-            u.Nome = form["Nome"];
             u.Username = form["Username"];
             u.email = form["email"];
+            u.Nome = form["Nome"];
+            if (u.Nome == "")
+            {
+                u.Nome = ViewBag.Nomelog;
+            }
+            if (u.Username == "")
+            {
+                u.Username = ViewBag.Usernamelog;
+            }
+            if (u.email == "")
+            {
+                u.email = ViewBag.Emaillog;
+            }
+            if (u.ImagemUsuario == "" || u.ImagemUsuario == "anexos/images.png")
+            {
+                u.ImagemUsuario = ViewBag.ImagemUsuariolog;
+            }
 
-            usuarioModel.alterar(u);
-            return Redirect("~/Editar");
+            usuarioModel.alterar(u); 
+
+            return Redirect("~/Edit");
         }
 
-        [Route("Excluir")]
+        [Route("{id}")]
         public IActionResult Excluir(string id)
         {
             usuarioModel.deletar(id);
             ViewBag.Usuario = usuarioModel.lertodos();
-            return LocalRedirect("~/Editar");
+            return LocalRedirect("~/Home");
         }
     }
 }

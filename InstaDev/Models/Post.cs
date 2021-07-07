@@ -44,16 +44,15 @@ namespace InstaDev.Models
 
         public void CriarId(Post p)
         {
-            Random randonzin = new Random(3000);
-
+            Random randonzin = new Random();
             bool validando = false;
 
             do
             {
-                p.IdPost = $"#BR{randonzin.Next()}";
+                p.IdPost = $"BR{randonzin.Next()}";
 
                 List<string> linhas = lertodaslinhasCSV(CAMINHO);
-                string validar = linhas.Find(x => x.Split(";")[0] == IdPost);
+                string validar = linhas.Find(x => x.Split(";")[0] == p.IdPost);
 
                 if (validar != null)
                 {

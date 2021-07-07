@@ -28,7 +28,7 @@ namespace InstaDev.Controllers
         {
             Post novaPostagem = new Post();
 
-            novaPostagem.IdUsuario = ViewBag.Nome;
+            novaPostagem.IdUsuario = ViewBag.Id;
             novaPostagem.Descrição = form["Descrição"];
             novaPostagem.Local = form["Local"];
             if (form.Files.Count > 0)

@@ -45,6 +45,8 @@ namespace InstaDev.Controllers
             if (logado != null)
             {
                 HttpContext.Session.SetString("Id", logado.Split(";")[0]);
+                HttpContext.Session.SetString("email", logado.Split(";")[3]);
+                HttpContext.Session.SetString("senha", logado.Split(";")[4]);
                 HttpContext.Session.SetString("Nome", logado.Split(";")[1]);
                 HttpContext.Session.SetString("Username", logado.Split(";")[2]);
                 HttpContext.Session.SetString("ImagemUsuario", logado.Split(";")[5]);
