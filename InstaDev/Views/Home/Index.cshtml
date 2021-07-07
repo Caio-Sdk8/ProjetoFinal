@@ -1,8 +1,32 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<link rel="stylesheet" href="~/css/logincadastro.css">
+<div class="quadradologin">
+
+    <img src="~/anexos/instadev.svg" alt="">
+    <form method="POST" action='@Url.Action("Logar")' class="login">
+        <input type="email" required placeholder="Email" name="Email">
+        <input type="password" required placeholder="Senha" name="Senha">
+        <button type="submit">Entrar</button>
+    </form>
+
+    <div id="ou">
+        <hr>
+        <span>ou</span>
+        <hr>
+    </div>
+    <a href="#">Esqueceu a senha?</a>
+</div>
+
+<div id="signup">
+    <span>Não tem uma conta?</span>
+    <a asp-controller="Cadastrar" asp-action="Index">Cadastre-se</a>
+</div>
+<span id="Obtenha">Obtenha o aplicativo.</span>
+
+<div class="baixeaqui">
+    <img src="~/anexos/appstore.png" alt="">
+    <img src="~/anexos/googleplay.png" alt="">
 </div>

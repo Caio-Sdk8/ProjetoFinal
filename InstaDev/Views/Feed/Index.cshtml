@@ -1,0 +1,183 @@
+@{
+    ViewData["Title"] = "Feed";
+}
+@model Usuario
+
+<link rel="stylesheet" href="~/css/feed.css">
+<div class="container divisao">
+    <div class="principal">
+        <section class="containerstory">
+
+            <div class="storys">
+                @foreach (var item in ViewBag.Usuario)
+                {
+                    <article class="storyuser">
+                        <a asp-controller="Perfil" asp-action="Index" asp-route-id="@item.IdUsuario"><img class="usuarios" src="~/@item.ImagemUsuario" alt="imagem de perfil"></a>
+                        <a>@item.Username</a>
+                    </article>
+                }
+            </div>
+
+        </section>
+
+        <section>
+            <div class="containerpostagem">
+                <div>
+                    <article class="postar">
+                        <a href=""><img src="~/@ViewBag.ImagemUsuariolog" alt="imagem de perfil"></a>
+                        <h2>Postar</h2>
+                    </article>
+
+                    <form method="POST" enctype="multipart/form-data" action='@Url.Action("Cadastrar")'
+                        class="formpostar">
+                        <input name="Descrição" class="descricaopostar" type="text"
+                            placeholder="Digite a descrição da imagem...">
+                        <input type="file" name="uploadfile" id="img" style="display: none;" alt="Escolha a imagem">
+                        <label class="img" for="img">Escolha a Imagem</label>
+                        <button type="submit" class="butpostar">Postar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            @foreach (var item in ViewBag.Post)
+            {
+
+                <div class="containerposts">
+                    <article class="perfilposts">
+                        <img src="~/anexos/gabigordo 2.png" alt="Imagem de Perfil">
+                        <div class="nicklocal">
+                            <a id="nick">@ViewBag.Idlog</a>
+                            <a>@item.Local</a>
+                        </div>
+                    </article>
+
+                    <img src="~/img/Postagens/@item.ImagemPost" alt="Publicação">
+
+                    <article class="formreagir">
+                        <div>
+                            <a href="#"><img class="icons" src="~/anexos/HeartSVG.svg" alt="Like"></a>
+                            <a href="#"><img class="icons" src="~/anexos/BubbleSVG.svg" alt="Comentar"></a>
+                        </div>
+                        <form method="POST" enctype="multipart/form-data" action='@Url.Action("comentar")'>
+                            <input type="text" placeholder="Comentar..." name="comentário da pessoa">
+                        </form>
+                    </article>
+
+                    <a id="likes">2077 curtidas</a>
+
+                    <article class="comentarios">
+
+                        <div class="comment">
+                            <h3 class="itenscomment">gabigordo</h3>
+                            <a href="#" class="itenscomment hashtag">#flamengo</a>
+                            <a class="itenscomment">Amo vocês mil milhões</a>
+                        </div>
+
+                        <div class="comment">
+                            <h3 class="itenscomment">yes_baby</h3>
+                            <a class="itenscomment">thank you</a>
+                        </div>
+
+                        <div class="comment">
+                            <h3 class="itenscomment">king_pele</h3>
+                            <a class="itenscomment">Esses são bons de bola, entende?</a>
+                        </div>
+                    </article>
+                </div>
+            }
+
+            <div class="containerposts">
+                <article class="perfilposts">
+                    <img src="~/anexos/gabigordo 2.png" alt="Imagem de Perfil">
+                    <div class="nicklocal">
+                        <a id="nick">gabigordo</a>
+                        <a>Flamengo, RJ</a>
+                    </div>
+                </article>
+
+                <img src="~/anexos/post (1).jpg" alt="Publicação">
+
+                <article class="formreagir">
+                    <div>
+                        <a href="#"><img class="icons" src="~/anexos/HeartSVG.svg" alt="Like"></a>
+                        <a href="#"><img class="icons" src="~/anexos/BubbleSVG.svg" alt="Comentar"></a>
+                    </div>
+                    <input type="text" placeholder="Comentar...">
+                </article>
+
+                <a id="likes">2077 curtidas</a>
+
+                <article class="comentarios">
+
+                    <div class="comment">
+                        <h3 class="itenscomment">gabigordo</h3>
+                        <a href="#" class="itenscomment hashtag">#flamengo</a>
+                        <a class="itenscomment">Amo vocês mil milhões <3 </a>
+                    </div>
+
+                    <div class="comment">
+                        <h3 class="itenscomment">yes_baby</h3>
+                        <a class="itenscomment">thank you</a>
+                    </div>
+
+                    <div class="comment">
+                        <h3 class="itenscomment">king_pele</h3>
+                        <a class="itenscomment">Esses são bons de bola, entende?</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="containerposts">
+                <article class="perfilposts">
+                    <img src="~/anexos/gabigordo 2.png" alt="Imagem de Perfil">
+                    <div class="nicklocal">
+                        <a id="nick">gabigordo</a>
+                        <a>Flamengo, RJ</a>
+                    </div>
+                </article>
+
+                <img src="~/anexos/post (2).jpg" alt="Publicação">
+
+                <article class="formreagir">
+                    <div>
+                        <a href="#"><img class="icons" src="~/anexos/HeartSVG.svg" alt="Like"></a>
+                        <a href="#"><img class="icons" src="~/anexos/BubbleSVG.svg" alt="Comentar"></a>
+                    </div>
+                    <input type="text" placeholder="Comentar...">
+                </article>
+
+                <a id="likes">2077 curtidas</a>
+
+                <article class="comentarios">
+
+                    <div class="comment">
+                        <h3 class="itenscomment">gabigordo</h3>
+                        <a href="#" class="itenscomment hashtag">#flamengo</a>
+                        <a class="itenscomment">Amo vocês mil milhões <3 </a>
+                    </div>
+
+                    <div class="comment">
+                        <h3 class="itenscomment">yes_baby</h3>
+                        <a class="itenscomment">thank you</a>
+                    </div>
+
+                    <div class="comment">
+                        <h3 class="itenscomment">king_pele</h3>
+                        <a class="itenscomment">Esses são bons de bola, entende?</a>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+    </div>
+
+    <article class="sessao">
+        <img class="imgsessão" src="~/@ViewBag.ImagemUsuariolog" alt="Imagem de perfil">
+        <div class="infosessao">
+            <h3 asp-controller="Perfil" asp-action="Index">@ViewBag.Usernamelog</h3>
+            <a>@ViewBag.Nomelog</a>
+        </div>
+    </article>
+</div>

@@ -1,11 +1,10 @@
 using System.Collections.Generic;
 using System.IO;
-
 namespace InstaDev.Models
 {
-    public class BaseInstadev
+    public class BaseInstaDev
     {
-        public void criarpastaearquivo(string _caminho){
+         public void criarpastaearquivo(string _caminho){
             string pasta = _caminho.Split("/")[0];
             string arquivo = _caminho.Split("/")[1];
 

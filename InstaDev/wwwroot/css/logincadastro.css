@@ -1,0 +1,246 @@
+*{
+    margin: 0
+}
+
+
+main{
+    background-color: #E5E5E5;
+    display: flex;
+    width: 100%;
+    height: 1024px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quadradocadastro{
+    margin-top: 149px;
+    background-color: white;
+    width: 342px;
+    display: flex;
+    flex-direction: column;
+    height: 461px;
+    align-items: center;
+}
+
+.quadradocadastro img{
+    width: 165px;
+    height: 55px;
+    margin-top: 30px;
+}
+
+.quadradocadastro span{
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 14px;
+    width: 209px;
+    height: 38px;
+    line-height: 19px;
+    text-align: center;
+    color: #909090;
+}
+
+.quadradocadastro form{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quadradocadastro input{
+    margin-bottom: 9px;
+    width: 267px;
+    height: 35px;
+    background: #FAFAFA;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+
+.quadradocadastro button{
+    width: 267px;
+    height: 30px;
+    margin-top: 23px;
+    background: #2686CC;
+    border-radius: 0;
+    border-width: 0;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: white;
+}
+
+#span2{
+    width: 254px;
+    height: 32px;
+    left: 833px;
+    top: 532px;
+
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+}
+
+#signup{
+    margin-top: 9px;
+    background-color: white;
+    width: 342px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#signup span{
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+}
+#signup a{
+    font-family: Segoe UI;
+    font-style: normal;
+    margin-left: 2px;
+    font-weight:500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2686CC;
+    text-decoration: none;
+}
+#Obtenha{
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #353535;
+    margin-top: 28px;
+}
+
+.baixeaqui{
+    margin-top: 29px;
+    width: 271px;
+}
+
+.baixeaqui img{
+    width: 133px;
+}
+
+.quadradologin{
+    margin-top: 149px;
+    background-color: white;
+    width: 342px;
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    align-items: center;
+}
+
+.quadradologin img{
+    width: 165px;
+    height: 55px;
+    margin-top: 30px;
+}
+
+.quadradologin span{
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 14px;
+    width: 209px;
+    height: 38px;
+    line-height: 19px;
+    text-align: center;
+    color: #909090;
+}
+
+.quadradologin form{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quadradologin input{
+    margin-bottom: 9px;
+    width: 267px;
+    height: 35px;
+    background: #FAFAFA;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.quadradologin button{
+    width: 267px;
+    height: 30px;
+    margin-top: 17px;
+    background: #2686CC;
+    border-radius: 0;
+    border-width: 0;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: white;
+}
+
+.login{
+    margin-top:24px;
+}
+
+#ou{
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between
+}
+#ou hr{
+    width: 109px;
+    height: 0px;
+    border: 1px solid #CBCBCB;
+    margin-top: 7px;
+}
+#ou span{
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 18px;
+    height: 16px;
+}
+
+.quadradologin a{
+    margin-top: 32px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration:none;
+    color: #2686CC;
+}
